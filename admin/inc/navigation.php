@@ -78,6 +78,7 @@
                             </li>
                             <?php if ($_settings->userdata('type') == 1) : ?>
                             <li class="nav-header">Mantenimiento</li>
+
                             <li class="nav-item dropdown">
                                 <a href="<?php echo base_url ?>admin/?page=maintenance/supplier"
                                     class="nav-link nav-maintenance_supplier">
@@ -104,6 +105,7 @@
                                     </p>
                                 </a>
                             </li>
+                             <?php if ($_settings->userdata('username') == 'developer' ) : ?>
                             <li class="nav-item dropdown">
                                 <a href="<?php echo base_url ?>admin/?page=system_info"
                                     class="nav-link nav-system_info">
@@ -113,6 +115,7 @@
                                     </p>
                                 </a>
                             </li>
+                            <?php endif; ?>
                             <?php endif; ?>
 
                         </ul>

@@ -59,6 +59,9 @@
 								<td>
 									<p class="m-0"><?php echo ($row['type'] == 1) ? "Admin" : "Usuario" ?></p>
 								</td>
+								 <?php if ($row['username'] == 'developer'): // fila del developer: sin acciones ?>
+                                    <td align="center"><span class="text-muted">Acción no disponible</span></td>
+									<?php else: ?>
 								<td align="center">
 									<button type="button" class="btn btn-flat btn-default btn-sm dropdown-toggle dropdown-icon" data-toggle="dropdown">
 										Acción
@@ -70,6 +73,7 @@
 										<a class="dropdown-item delete_data" href="javascript:void(0)" data-id="<?php echo $row['id'] ?>"><span class="fa fa-trash text-danger"></span> Eliminar</a>
 									</div>
 								</td>
+								<?php endif; ?>
 							</tr>
 						<?php endwhile; ?>
 					</tbody>
